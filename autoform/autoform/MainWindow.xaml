@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dtgCars" Grid.Row="0" Grid.ColumnSpan="2" />
+
+        <ListBox x:Name="lbSpecYear" Grid.Row="1" Grid.Column="0" Width="200" Height="180" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10"/>
+
+        <DockPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10">
+            <Label Content="Év: " />
+            <TextBox x:Name="txtSpecYear" Height="30" Width="150" TextChanged="txtSpecYear_TextChanged" />
+        </DockPanel>
+
+        <Button x:Name="btnLoad" Content="Betölt" Grid.Row="1" Grid.Column="1" Width="150" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10" Click="btnLoad_Click"/>
+        <Button x:Name="btnClose" Content="Bezár" Grid.Row="1" Grid.Column="1" Width="150" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" Click="btnClose_Click"/>
 
     </Grid>
 </Window>
